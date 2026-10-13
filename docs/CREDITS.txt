@@ -1,0 +1,33 @@
+Midnight Aqua by Samsqwamch — repository packaging revision 0.3.2, 13 October 2026.
+
+Based in part on Estuary 4.0.0 bundled with Kodi 21.2 Omega, as confirmed by
+the creator. Estuary by phil65 (Team Kodi); the upstream provider metadata
+also credits Ichabod Fletchman. Preserve any additional upstream notices.
+Source: https://github.com/xbmc/xbmc/tree/21.2-Omega/addons/skin.estuary
+Estuary code: GNU GPL version 2.0. Estuary artwork: CC BY-SA 4.0.
+Midnight Aqua is a modified skin, not an official Team Kodi release.
+
+Midnight Aqua's prior layout, navigation and playback customizations were
+already present in the supplied 0.3.1. Their individual modification dates
+were not independently verified. This 0.3.2 revision changes only packaging
+version and license/source metadata and adds redistribution notices.
+Every UI XML, font, image and other existing runtime resource is unchanged.
+
+The combined Estuary-derived skin code is distributed under GPL-2.0-only.
+Original Midnight Aqua interface artwork retains its declared CC BY-SA 4.0
+terms to the extent copyright applies. These terms do not replace rights in
+third-party marks or pre-existing imagery. The creator states the additional
+artwork was AI-created; that statement is recorded, not independently audited.
+CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
+
+DejaVu fonts retain FONT-LICENSE.txt and LICENSES/DejaVu-Fonts.txt.
+Midnight Aqua Helper remains MIT, copyright 2026 Midnight Aqua contributors.
+The supplied release's CREDITS.txt and LICENSES are retained verbatim under
+LICENSES/supplied-release/ as historical component notices. Its blanket
+CC BY-SA description of skin code is clarified by this notice and LICENSE.txt.
+
+No Freedoom WAD files or content add-on are included in this two-add-on
+repository. The supplied Freedoom notices are retained for provenance only;
+they do not mean the optional Freedoom content is installed by this repository.
+The helper can fetch Libretro metadata/artwork on demand; those downloaded
+items are not part of these ZIPs and retain their upstream terms.

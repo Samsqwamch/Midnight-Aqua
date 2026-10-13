@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons>
+  <addon id="skin.midnightaqua" version="0.3.2" name="Midnight Aqua" provider-name="Samsqwamch">
+    <requires>
+      <import addon="xbmc.gui" version="5.17.0" />
+      <import addon="script.globalsearch" version="9.0.5" optional="true" />
+      <import addon="script.midnightaqua.helper" version="0.3.1" optional="true" />
+    </requires>
+    <extension point="xbmc.gui.skin" debugging="false">
+      <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <license>GPL-2.0-only (skin code); CC BY-SA 4.0 (artwork); Bitstream Vera/DejaVu (fonts)</license>
+      <assets>
+        <icon>resources/icon.png</icon>
+        <fanart>media/backgrounds/default.jpg</fanart>
+        <screenshot>resources/screenshot-01.jpg</screenshot>
+      </assets>
+      <summary lang="en_GB">Midnight Aqua — Final release for Kodi 21 Omega</summary>
+      <description lang="en_GB">Midnight Aqua created by Samsqwamch. Cinematic Movies and TV Shows, Music, Pictures, Games, Add-ons, Weather, Profiles and PVR integration, with remote navigation and custom playback controls. Final release based on the creator-approved NVIDIA Shield TV Pro build.</description>
+      <disclaimer lang="en_GB">For Kodi 21 Omega. Keep Estuary installed for recovery. Optional game clients and service providers are installed separately through Kodi.</disclaimer>
+      <news>Midnight Aqua created by Samsqwamch. Final 0.3.1 removes the duplicate-looking seek controls from the pause menu and reconnects remote navigation. Other finalized features and artwork are preserved.</news>
+      <source>https://github.com/Samsqwamch/Midnight-Aqua</source>
+      <path>v0.3.2/skin.midnightaqua-0.3.2.zip</path>
+    </extension>
+  </addon>
+  <addon id="script.midnightaqua.helper" name="Midnight Aqua Helper" version="0.3.1" provider-name="Samsqwamch">
+    <requires>
+      <import addon="xbmc.python" version="3.0.1" />
+      <import addon="visualization.shadertoy" version="21.0.2" optional="true" />
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.python.pluginsource" library="default.py">
+      <provides>video audio image game executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Midnight Aqua navigation and playback support</summary>
+      <description lang="en_GB">Midnight Aqua Home providers, playback lifecycle, safe removal, source indexing, Games, settings backup/recovery and remote focus support. Optional for essential native Settings and Change Skin navigation.</description>
+      <platform>all</platform>
+      <license>MIT</license>
+      <path>v0.3.2/script.midnightaqua.helper-0.3.1.zip</path>
+    </extension>
+    <extension point="kodi.context.item">
+      <menu id="kodi.core.main">
+        <item library="contextitem.py" args="refresh">
+          <label>Refresh Information / Artwork</label>
+          <visible>String.IsEqual(Window(home).Property(MA.HelperReady),true) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,tvshow)] + Integer.IsGreater(ListItem.DBID,0)</visible>
+        </item>
+        <item library="contextitem.py" args="library_remove">
+          <label>Remove video from library?</label>
+          <visible>[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,episode)] + Integer.IsGreater(ListItem.DBID,0)</visible>
+        </item>
+        <item library="contextitem.py" args="library_remove_tvshow">
+          <label>Remove TV Show</label>
+          <visible>String.IsEqual(ListItem.DBTYPE,tvshow) + Integer.IsGreater(ListItem.DBID,0)</visible>
+        </item>
+      </menu>
+    </extension>
+  </addon>
+  <addon id="repository.midnightaqua" name="Midnight Aqua Repository" version="1.0.0" provider-name="Samsqwamch">
+    <requires>
+      <import addon="xbmc.addon" version="21.0.0" />
+    </requires>
+    <extension point="xbmc.addon.repository" name="Midnight Aqua Repository">
+      <dir minversion="21.0.0" maxversion="21.9.99">
+        <info>https://samsqwamch.github.io/Midnight-Aqua/addons.xml</info>
+        <checksum verify="sha256">https://samsqwamch.github.io/Midnight-Aqua/addons.xml.sha256</checksum>
+        <datadir>https://github.com/Samsqwamch/Midnight-Aqua/releases/download/</datadir>
+        <artdir>https://samsqwamch.github.io/Midnight-Aqua/art/</artdir>
+        <hashes>sha256</hashes>
+      </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en_GB">Midnight Aqua add-ons for Kodi 21 Omega</summary>
+      <description lang="en_GB">Install the Midnight Aqua Helper, then the Midnight Aqua skin. Packages are downloaded over HTTPS from versioned GitHub Releases.</description>
+      <platform>all</platform>
+      <license>MIT</license>
+      <source>https://github.com/Samsqwamch/Midnight-Aqua</source>
+      <path>v0.3.2/repository.midnightaqua-1.0.0.zip</path>
+    </extension>
+  </addon>
+</addons>

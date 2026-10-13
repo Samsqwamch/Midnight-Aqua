@@ -1,0 +1,16 @@
+Midnight Aqua created by Samsqwamch.
+
+Release: Midnight Aqua 0.3.1, 12 October 2026.
+
+Midnight Aqua skin source and original interface artwork: existing CC BY-SA 4.0
+license retained. Midnight Aqua Helper: existing MIT license and copyright
+notice retained. DejaVu fonts: included font license retained.
+
+Freedoom 0.12.0 is created by the Freedoom project contributors. Both game data
+files are unchanged. Its original BSD-3-Clause license and contributor credits
+are included in the content add-on and LICENSES folder.
+
+Kodi and third-party games, consoles, media artwork, services and marks retain
+their respective authors' credits and ownership. Samsqwamch's creator credit
+identifies the Midnight Aqua skin; it does not claim authorship of third-party
+content. Existing component license notices are preserved.

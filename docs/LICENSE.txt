@@ -1,0 +1,16 @@
+Midnight Aqua skin — component license scope
+
+Estuary-derived skin code and modifications: GNU General Public License v2.0
+(GPL-2.0-only). See LICENSES/GPL-2.0-only.txt and LICENSES/Estuary-LICENSE.txt.
+This archive contains the editable XML skin source; there is no compiled
+skin code or separate build step. Upstream source and change details are in
+CREDITS.txt. Existing source comments and notices are retained.
+
+Estuary artwork: Creative Commons Attribution-ShareAlike 4.0 International.
+Original Midnight Aqua artwork: the existing CC BY-SA 4.0 grant is retained
+to the extent applicable. See https://creativecommons.org/licenses/by-sa/4.0/
+and CREDITS.txt for attribution and modifications. No trademark rights or
+endorsement are granted. Third-party rights are not relicensed by this notice.
+
+DejaVu fonts: their separate included Bitstream Vera/DejaVu terms apply.
+See FONT-LICENSE.txt. The Helper is a separate MIT-licensed add-on.
